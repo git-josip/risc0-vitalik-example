@@ -1,0 +1,10 @@
+[package]
+name = "vitalik-example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+vitalik-example-methods = { path = "../methods" }
+rand = "0.8"
+risc0-zkp = "0.11.0-rc.4"
+risc0-zkvm = "0.11.0-rc.4"

@@ -12,6 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-fn main() {
-    risc0_build::embed_methods();
+#![no_main]
+
+use risc0_zkvm_guest::env;
+
+risc0_zkvm_guest::entry!(main);
+
+pub fn main() {
+    let x: u32 = env::read();
+
+    // calculator of: x^3 + x + 5 = 35. hint solution is x = 3
+    let solution = x.pow(3) + x + 5;
+
+    if solution != 35 {
+        panic!("Invalid solution. Please try again.");
+    }
+
+    env::commit(&solution);
 }
