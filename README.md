@@ -1,6 +1,6 @@
 # vitalik_example
 
-Here is circuit for simple problem defined in Vitalik post.
+Here is risczero solution for simple problem defined in Vitalik post.
 
 - https://medium.com/@VitalikButerin/quadratic-arithmetic-programs-from-zero-to-hero-f6d558cea649
 
